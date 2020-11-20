@@ -1,0 +1,25 @@
+Description 
+	#this file for rapid direct to project SVN repositry
+
+
+	you need to add config.json file in the same directory 
+	format like that
+	ex.
+	{
+	"root":"$SVN_URL",
+	"object": [
+		{
+			"modal": "ipad",
+			"boardid": "id",
+			"repositry": "/xxxxxx"
+		},
+		.
+		.
+		.
+		.
+		.
+		.
+	]
+	}
+	
+	and depend on the JSON.ahk fork from the cocobelgica/AutoHotkey-JSON.git
