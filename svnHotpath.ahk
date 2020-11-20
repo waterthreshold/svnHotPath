@@ -7,9 +7,9 @@ if (Instr(UserInput,"V")){
 NweUserInput:= StrReplace( NweUserInput , "V" ,"v")
 
 }
-; msgbox , %NweUserInput%
+; msgbox , %A_ScriptDir%\config.json
 length :=StrLen (NweUserInput)
-FileRead, json_str, config.json
+FileRead, json_str, %A_ScriptDir%\config.json
 parsed := JSON.Load(json_str)
 ; load_file
 ; MsgBox, % (parsed.object).MaxIndex()
@@ -32,7 +32,7 @@ else {
 		}
 	}
 }
-msgbox, %svn_path%
+; msgbox, %svn_path%
 run  "C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe" /command:repobrowser /path:%svn_path%
 Exitapp
 ; parsed.object[A_INDEX] ,userinput
